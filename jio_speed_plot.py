@@ -1,8 +1,9 @@
-import pandas as pd
 import time
 import datetime
-import matplotlib.pyplot as plt 
+
+import pandas as pd
 import matplotlib
+import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from pandas import ExcelWriter
 
@@ -15,11 +16,11 @@ df.Download_Speed = df.Download_Speed.convert_objects(convert_numeric=True)
 df.Upload_Speed = df.Upload_Speed.convert_objects(convert_numeric=True)
 df['Result_ID'] = df['Result_ID'].fillna(0).astype(int)
 
-print (df)
-#print dt
+print(df)
+# print dt
 ldr = [1.00]*195
 print(ldr)
-x=[]
+x = []
 x = [datetime.datetime.strptime(s, "%d-%m-%Y %H-%M") for s in dt]
 
 downspeed = [s for s in df.Download_Speed]
